@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("InstantEverClip.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("me.u6k.InstantEverClip.Resource", IsApplication=true)]
 
-namespace InstantEverClip
+namespace me.u6k.InstantEverClip
 {
 	
 	

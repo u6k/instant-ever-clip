@@ -6,7 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
-namespace InstantEverClip
+namespace me.u6k.InstantEverClip
 {
     [Activity(Label = "InstantEverClip", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
