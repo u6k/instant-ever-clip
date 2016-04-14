@@ -8,7 +8,7 @@
     <ProjectGuid>{AB858234-F73C-4AB9-BD9E-61386C610AED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InstantEverClip</RootNamespace>
+    <RootNamespace>me.u6k.InstantEverClip</RootNamespace>
     <AssemblyName>InstantEverClip</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
