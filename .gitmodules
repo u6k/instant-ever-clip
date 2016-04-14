@@ -1,0 +1,3 @@
+[submodule "evernote-sdk-csharp"]
+	path = evernote-sdk-csharp
+	url = https://github.com/evernote/evernote-sdk-csharp.git
