@@ -25,15 +25,38 @@ namespace me.u6k.InstantEverClip
 
     class MainPage : ContentPage
     {
+        private Entry urlEntry;
+
         public MainPage()
         {
+            Label urlEntryLabel = new Label
+            {
+                Text = "URL"
+            };
+            urlEntry = new Entry
+            {
+                HorizontalOptions = LayoutOptions.FillAndExpand
+            };
+
+            StackLayout layout1 = new StackLayout
+            {
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                Orientation = StackOrientation.Horizontal,
+                Children = { urlEntryLabel, urlEntry }
+            };
+
             Button btn = new Button
             {
                 Text = "ノートを作成"
             };
             btn.Clicked += ClickedCreateNoteButton;
 
-            Content = btn;
+            StackLayout rootLayout = new StackLayout
+            {
+                Children = { layout1, btn }
+            };
+
+            Content = rootLayout;
         }
 
         private void ClickedCreateNoteButton(object sender, EventArgs e)
@@ -63,13 +86,17 @@ namespace me.u6k.InstantEverClip
                 NoteStore.Client noteStore = new NoteStore.Client(noteStoreProtocol);
 
                 Note note = new Note();
-                note.Title = "Test";
+                note.Title = urlEntry.Text;
+                note.Attributes = new NoteAttributes
+                {
+                    SourceURL = urlEntry.Text
+                };
                 note.Content = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
                     + "<!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\">"
-                    + "<en-note>Test " + DateTime.Now.ToString() + "</en-note>";
+                    + "<en-note>" + urlEntry.Text + "</en-note>";
 
                 Note createdNote = noteStore.createNote(authToken, note);
-                App.ShowToast(ToastNotificationType.Success, "ノート作成", "ノートを作成しました。(GUID=" + createdNote.Guid + ")");
+                App.ShowToast(ToastNotificationType.Success, "ノート作成", "ノートを作成しました。");
             }
             catch (Exception ex)
             {
