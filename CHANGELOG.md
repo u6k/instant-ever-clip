@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## [v0.1.0](https://myredmine-u6kapps.rhcloud.com/versions/84) - unreleased
+## [v0.1.0](https://myredmine-u6kapps.rhcloud.com/versions/84) - 2016-04-17
 新規ノートを作成して、URLをクリップできます。
 
 ### Added
