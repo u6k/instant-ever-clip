@@ -23,7 +23,7 @@ namespace InstantEverClip.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            LoadApplication(new me.u6k.InstantEverClip.App());
 
             return base.FinishedLaunching(app, options);
         }
