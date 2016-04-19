@@ -37,6 +37,7 @@ namespace me.u6k.InstantEverClip
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand
             };
+            Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
 
             StackLayout layout1 = new StackLayout
             {
