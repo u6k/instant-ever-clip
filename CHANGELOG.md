@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## [v0.1.1](https://myredmine-u6kapps.rhcloud.com/issues/5150) - 2016-04-19
+iPhoneでもアプリを動作させることができます。
+
 ## [v0.1.0](https://myredmine-u6kapps.rhcloud.com/versions/84) - 2016-04-17
 新規ノートを作成して、URLをクリップできます。
 
