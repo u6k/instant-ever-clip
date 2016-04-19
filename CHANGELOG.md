@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [v0.2.0](https://myredmine-u6kapps.rhcloud.com/versions/85) - unreleased
+Webページのタイトルをノート・タイトルとしてクリップします。
+
+### Added
+- [#5140](https://myredmine-u6kapps.rhcloud.com/issues/5140) URLからhtmlを取得してタイトルを抽出して、それをノート・タイトルとしてノートを作成します。
+
 ## [v0.1.1](https://myredmine-u6kapps.rhcloud.com/issues/5150) - 2016-04-19
 iPhoneでもアプリを動作させることができます。
 
