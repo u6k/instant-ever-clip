@@ -6,6 +6,7 @@ Evernote公式アプリのWebクリップや、EverClipなどでWebページを�
 
 ## 対象OS
 - Android 4.1以上
+- iOS 9.0以上
 
 ## 機能
 - 入力されたURLを新規ノートにクリップします。
@@ -16,4 +17,10 @@ Evernote公式アプリのWebクリップや、EverClipなどでWebページを�
 ## ビルド方法
 - Xamarinでソリューションを開きます。
 - 開発者トークンをプロパティに設定します。
+
+### Androidの場合
 - apkをエクスポートします。
+
+### iOSの場合
+- Xcodeで`me.u6k.InstantEverClip`プロジェクトを作成して、フリー証明書を発行しておく。
+- `InstantEverClip.iOS`プロジェクトに証明書を設定する。
