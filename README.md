@@ -24,3 +24,8 @@ Evernote公式アプリのWebクリップや、EverClipなどでWebページを�
 ### iOSの場合
 - Xcodeで`me.u6k.InstantEverClip`プロジェクトを作成して、フリー証明書を発行しておく。
 - `InstantEverClip.iOS`プロジェクトに証明書を設定する。
+
+## 依存ライブラリ
+- [ReadJEnc](http://hp.vector.co.jp/authors/VA055804/) Ver 1.2.2.0309 (2015/03/09)
+    - 著作権表示: Copyright (C) 2014-2015 hnx8(H.Takahashi)
+    - ライセンス: [the MIT license](http://opensource.org/licenses/mit-license.php)
