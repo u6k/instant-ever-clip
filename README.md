@@ -26,6 +26,12 @@ Evernote公式アプリのWebクリップや、EverClipなどでWebページを�
 - `InstantEverClip.iOS`プロジェクトに証明書を設定する。
 
 ## 依存ライブラリ
+- [HtmlAgilityPack](https://www.nuget.org/packages/HtmlAgilityPack)
+    - Webサイト: https://htmlagilitypack.codeplex.com/
+    - ライセンス: [Microsoft Public License](https://htmlagilitypack.codeplex.com/license)
+- [Toasts.Forms.Plugin](https://www.nuget.org/packages/Toasts.Forms.Plugin/)
+    - 著作権表示: Copyright (c) 2015 Egor
+    - ライセンス: [The MIT License](https://github.com/EgorBo/Toasts.Forms.Plugin/blob/master/LICENSE)
 - [ReadJEnc](http://hp.vector.co.jp/authors/VA055804/) Ver 1.2.2.0309 (2015/03/09)
     - 著作権表示: Copyright (C) 2014-2015 hnx8(H.Takahashi)
     - ライセンス: [the MIT license](http://opensource.org/licenses/mit-license.php)
