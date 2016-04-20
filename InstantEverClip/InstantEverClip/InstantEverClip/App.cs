@@ -92,11 +92,12 @@ namespace me.u6k.InstantEverClip
                     throw new Exception("バージョン・チェックがエラーになりました。");
                 }
 
-                var htmlDoc = new HtmlDocument();
+                var noteTitle = "";
                 var req = WebRequest.Create(url);
                 var res = await req.GetResponseAsync();
                 using (Stream s = res.GetResponseStream())
                 {
+                    var htmlDoc = new HtmlDocument();
                     var buf = new byte[1024 * 1024];
                     var ms = new MemoryStream();
                     var len = 0;
@@ -108,19 +109,35 @@ namespace me.u6k.InstantEverClip
                     buf = ms.ToArray();
                     var html = "";
                     var enc = Hnx8.ReadJEnc.ReadJEnc.JP.GetEncoding(buf, buf.Length, out html);
-                    Debug.WriteLine("HTML Encoding=" + enc.ToString());
-                    htmlDoc.LoadHtml(html);
-                }
-                HtmlNode titleNode = htmlDoc.DocumentNode.Descendants("title").First();
-                String noteTitle = titleNode.InnerText;
-                if (noteTitle.Trim().Length == 0)
-                {
-                    noteTitle = url;
-                    Debug.WriteLine("title tag is not found or empty.");
-                }
-                else
-                {
-                    Debug.WriteLine("noteTitle=" + noteTitle);
+                    if (enc != null)
+                    {
+                        Debug.WriteLine("HTML Encoding=" + enc.ToString());
+                        htmlDoc.LoadHtml(html);
+                        HtmlNode titleNode = htmlDoc.DocumentNode.Descendants("title").First();
+                        if (titleNode != null)
+                        {
+                            if (!string.IsNullOrWhiteSpace(titleNode.InnerText))
+                            {
+                                noteTitle = titleNode.InnerText;
+                                Debug.WriteLine("noteTitle=" + noteTitle);
+                            }
+                            else
+                            {
+                                noteTitle = url;
+                                Debug.WriteLine("title tag is empty.");
+                            }
+                        }
+                        else
+                        {
+                            noteTitle = url;
+                            Debug.WriteLine("title tag is not found.");
+                        }
+                    }
+                    else
+                    {
+                        noteTitle = url;
+                        Debug.WriteLine("url is not text/html.");
+                    }
                 }
 
                 string noteStoreUrl = userStore.getNoteStoreUrl(authToken);
