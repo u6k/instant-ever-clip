@@ -47,7 +47,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.2.0-SNAPSHOT</string>
+	<string>0.2.0</string>
 	<key>CFBundleVersion</key>
 	<string>0.2.0</string>
 </dict>

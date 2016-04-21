@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## [v0.2.0](https://myredmine-u6kapps.rhcloud.com/versions/85) - unreleased
+## [v0.2.0](https://myredmine-u6kapps.rhcloud.com/versions/85) - 2016-04-21
 Webページのタイトルをノート・タイトルとしてクリップします。
 
 ### Added
