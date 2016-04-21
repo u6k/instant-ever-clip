@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Plugin.Toasts;
@@ -25,5 +26,22 @@ namespace me.u6k.InstantEverClip
             LoadApplication(new App());
         }
     }
-}
 
+    [Activity(Label = "InstantEverClip")]
+    [IntentFilter(new[] { Intent.ActionSend },
+        Categories = new[] { Intent.CategoryDefault },
+        DataMimeType = "text/plain")]
+    public class ClipActivity : Activity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+
+            if (this.Intent.Action == Intent.ActionSend)
+            {
+                System.Diagnostics.Debug.WriteLine("TEXT=" + this.Intent.GetStringExtra(Intent.ExtraText));
+                System.Diagnostics.Debug.WriteLine("SUBJECT=" + this.Intent.GetStringExtra(Intent.ExtraSubject));
+            }
+        }
+    }
+}
