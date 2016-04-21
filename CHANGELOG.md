@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [v0.3.0](https://myredmine-u6kapps.rhcloud.com/versions/87) - unreleased
+共有メニューからクリップします。(Androidのみ)
+
+### Added
+- [#5151](https://myredmine-u6kapps.rhcloud.com/issues/5151) 共有メニューから画面を開かずにクリップします。
+
 ## [v0.2.0](https://myredmine-u6kapps.rhcloud.com/versions/85) - 2016-04-21
 Webページのタイトルをノート・タイトルとしてクリップします。
 
